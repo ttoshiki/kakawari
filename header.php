@@ -20,13 +20,11 @@
     <meta name="viewport" content="width=1200" />
     <?php endif; ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-  <link href="<?php bloginfo('template_url'); ?>/css/reset.css" rel="stylesheet" type="text/css">
-  <link href="<?php bloginfo('template_url'); ?>/css/style.css" rel="stylesheet" type="text/css">
-  <link href="<?php bloginfo('template_url'); ?>/css/page.css" rel="stylesheet" type="text/css">
-  <link href="<?php bloginfo('template_url'); ?>/css/responsive.css" rel="stylesheet" type="text/css">
-  <link href="<?php bloginfo('template_url'); ?>/css/page-responsive.css" rel="stylesheet" type="text/css">
-  <link href="<?php bloginfo('template_url'); ?>/css/animate.css" rel="stylesheet">
-
+    <link href="<?php bloginfo('template_url'); ?>/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/css/style.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/css/page.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_url'); ?>/css/page-responsive.css" rel="stylesheet" type="text/css">
 
   <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 
@@ -34,15 +32,36 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<?php do_action('bbhb_header') ?>
-    <?php if (!( is_home() || is_front_page() )) : ?>
-    <div class="breadcrumbs">
-        <div class="container">
-            <?php if(function_exists('bcn_display'))
-            {
-                bcn_display();
-            }?>
-        </div>
-    </div>
-    <?php endif; ?>
+<?php wp_body_open(); ?>
+<div id="page" class="site">
+	<header id="header" class="header">
+		<div class="header__hammenu -sp">
+			<?php
+				the_custom_logo();
+			?>
+			<span class="header__trigger" href="#" @click="toggleMenu" id="trigger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+			<div class="header__hammenuWrapper">
+				<div class="header__hammenuInner">
+					<?php
+						wp_nav_menu(array(
+							'theme_location' => 'primary'
+						));
+					?>
+				</div>
+			</div>
+		</div>
+		<nav class="header__nav -pc">
+			<?php
+				the_custom_logo();
+			?>
+			<?php
+				wp_nav_menu(array(
+					'theme_location' => 'primary'
+				));
+			?>
+		</nav>
+	</header>

@@ -1,4 +1,5 @@
-@charset "UTF-8";
+@use "variables";
+
 /*
 Theme Name: Tryfe_Web
 Theme URI: http://
@@ -15,6 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 media_wp is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
+
 *,
 *::after,
 *::before {
@@ -26,7 +28,9 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #333;
@@ -48,9 +52,9 @@ img {
 }
 
 select,
-input[type=text],
-input[type=tel],
-input[type=email] {
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   border-radius: none;
   border-radius: 0;
   -webkit-appearance: none;
@@ -74,7 +78,7 @@ textarea {
 
 .site-main {
   width: 100%;
-  min-width: 1100px;
+  min-width: variables.$content-width-md;
   margin: 0 auto;
 }
 
@@ -82,7 +86,7 @@ textarea {
   display: none;
 }
 
-@media screen and (max-width: 480px) {
+@include variables.mq(variables.$mobile) {
   .-pc {
     display: none;
   }
@@ -96,10 +100,10 @@ textarea {
   }
 
   select,
-input[type=text],
-input[type=tel],
-input[type=email],
-textarea {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
     font-size: 16px;
   }
 }
