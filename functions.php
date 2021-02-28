@@ -44,7 +44,8 @@ if ( ! function_exists( 'media_wp_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'media_wp' ),
+			'primary' => esc_html__( 'main_menu', 'media_wp' ),
+			'footer' => esc_html__( 'footer_menu', 'media_wp' ),
 		) );
 
 		/*
