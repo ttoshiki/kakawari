@@ -128,8 +128,13 @@ function media_wp_scripts() {
 	wp_enqueue_script( 'media_wp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+        wp_enqueue_script( 'comment-reply' );
 	}
+
+    if(is_front_page()) {
+        wp_enqueue_script( 'gsap-scripts', get_template_directory_uri() . '/assets/js/lib/gsap.min.js', array(), '', true );
+        wp_enqueue_script( 'main-animation-scripts', get_template_directory_uri() . '/assets/js/main-animation.js', array(), '', true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'media_wp_scripts' );
 
@@ -518,3 +523,15 @@ function is_mymobile()
 }
 
 add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+
+/*********************************
+ トップページColumnの表示件数を変更
+**********************************/
+function change_posts_per_page($query)
+{
+    if (is_front_page()) {
+        $query->set('posts_per_page', '3');
+        return $query;
+    }
+}
+add_filter('pre_get_posts', 'change_posts_per_page');

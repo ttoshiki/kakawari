@@ -1,1 +1,13 @@
-@import "variables";
+@use "variables";
+
+.l-doubleCol {
+  display: flex;
+  max-width: variables.$content-width-sm;
+  padding: 0 12px;
+  margin: 0 auto;
+
+  &.-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+}

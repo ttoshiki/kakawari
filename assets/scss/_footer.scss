@@ -1,4 +1,107 @@
 @use "variables";
 
 .footer {
+  padding-bottom: 32px;
+  margin: 260px auto 0;
+  background-image: url("./dist/images/footer_bg@2x.jpg");
+
+  &__banner {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: max(-8vw, -120px);
+  }
+
+  &__bannerLink {
+    position: relative;
+    top: -10vw;
+    top: max(-10vw, -125px);
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  &__bannerContents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: min(340px, 25vw);
+    }
+  }
+
+  &__bannerTextEn {
+    display: flex;
+  }
+
+  &__bannerTextEn {
+    display: flex;
+    align-items: center;
+
+    .linkText {
+      font-size: min(26px, 2.6vw);
+      letter-spacing: 5px;
+    }
+
+    .linkCircle {
+      min-width: clamp(40px, 3.473vw, 52px);
+      min-height: clamp(40px, 3.473vw, 52px);
+
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        top: 46%;
+        right: -52%;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: 126px;
+    margin: 0 auto;
+    margin-top: min(40px, 3vw);
+  }
+
+  &__menu {
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin: 48px auto 0;
+    }
+
+    .menu-item {
+      margin: 0 24px;
+      font-size: 17px;
+      letter-spacing: 3px;
+
+      a {
+        color: variables.$white;
+      }
+    }
+  }
+
+  &__copyrightWrapper {
+    margin-top: 32px;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  &__copyright {
+    display: inline-block;
+    margin: 0 auto;
+    color: variables.$white;
+  }
 }

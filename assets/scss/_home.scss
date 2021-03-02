@@ -1,4 +1,266 @@
 @use "variables";
 
 .home {
+  &__mv {
+    position: relative;
+
+    &.-fixed {
+      width: 73.2%;
+      margin-top: 16px;
+      mix-blend-mode: multiply;
+    }
+
+    &.-first,
+    &.-second,
+    &.-third {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+    }
+
+    &.-second {
+      top: 100px;
+    }
+
+    &.-second,
+    &.-third {
+      opacity: 0;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: space-between;
+    max-width: variables.$content-width-sm;
+    padding: 0 12px;
+    margin: 72px auto 0;
+
+    .seemoreLink {
+      width: 76%;
+    }
+
+    .subHeadingJp {
+      margin-right: 40px;
+    }
+  }
+
+  &__profileBlock {
+    display: flex;
+
+    &.-left {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 27%;
+      min-width: 270px;
+    }
+
+    &.-center {
+      align-items: flex-start;
+      width: 50%;
+      margin: 0 32px;
+    }
+
+    &.-right {
+      flex-direction: column;
+    }
+
+    .subHeadingJp {
+      height: 356px;
+    }
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    line-height: 3;
+    color: variables.$black;
+    letter-spacing: 1px;
+  }
+
+  &__column {
+    max-width: variables.$content-width-sm;
+    margin: 128px auto 0;
+  }
+
+  &__columnInner {
+    display: flex;
+    padding: 0 12px;
+  }
+
+  &__columnList {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 48px;
+    margin-left: 40px;
+
+    .wp-post-image {
+      width: 100%;
+      height: 24.733vw;
+      max-height: 258px;
+      box-shadow: 0px 0px 19.71px 7.29px rgba(0, 0, 0, 0.07);
+      object-fit: cover;
+    }
+  }
+
+  &__columnDate {
+    display: block;
+    margin-top: 16px;
+    font-size: 13px;
+    color: variables.$color-primary;
+    letter-spacing: 1px;
+  }
+
+  &__columnTitle {
+    display: -webkit-box;
+    margin-top: 8px;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    a {
+      color: variables.$black;
+    }
+  }
+
+  &__columnLink {
+    position: absolute;
+    right: -70px;
+    bottom: 74px;
+
+    &.-medium {
+      display: none;
+    }
+  }
+
+  &__service {
+    margin: 120px auto 0;
+
+    .subHeadingJp {
+      height: 394px;
+      margin: 0 32px 0 40px;
+    }
+
+    .home__paragraph {
+      margin-top: 24px;
+    }
+
+    .seemoreLink {
+      margin-top: 16px;
+    }
+  }
+
+  &__gallery {
+    margin: 120px auto 0;
+
+    .subHeadingJp {
+      height: 326px;
+      margin: 0 40px 0 32px;
+    }
+
+    .home__paragraph {
+      margin-top: 24px;
+    }
+
+    .seemoreLinkArea {
+      margin-right: 24px;
+    }
+
+    .seemoreLink {
+      margin-top: 16px;
+    }
+
+    .l-doubleCol__col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__instagram {
+    max-width: variables.$content-width-sm;
+    margin: 120px auto 0;
+
+    .l-doubleCol__col {
+      width: 100%;
+      margin-right: 24px;
+    }
+
+    #sb_instagram.sbi_medium .sbi_type_carousel .sbi_photo_wrap .fa-clone {
+      display: none !important;
+    }
+
+    #sb_instagram .sbi_link {
+      box-shadow: 0px 0px 19.71px 7.29px rgba(0, 0, 0, 0.07);
+    }
+
+    .subHeadingEn {
+      letter-spacing: 8px;
+    }
+
+    .seemoreLink {
+      margin-top: 12px;
+      margin-left: 16px;
+    }
+  }
+
+  &__otherServiceArea {
+    display: flex;
+    justify-content: center;
+    margin: 120px auto 0;
+  }
+
+  &__serviceLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
+    min-height: 132px;
+    margin: 0 30px;
+    background-color: variables.$color-secondary;
+    border-radius: 50%;
+  }
+
+  &__serviceIcon {
+    &.-note {
+      width: 36%;
+    }
+
+    &.-youtube {
+      width: 47%;
+    }
+
+    &.-facebook {
+      width: 19%;
+    }
+  }
+}
+
+@include variables.mq(variables.$content-width-xl) {
+  .home {
+    &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__columnLink {
+      &.-large {
+        display: none;
+      }
+
+      &.-medium {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        display: block;
+        padding-right: 24px;
+        margin-top: 40px;
+      }
+    }
+  }
 }

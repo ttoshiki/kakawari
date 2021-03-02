@@ -1,1 +1,81 @@
 @use "variables";
+
+.-vertical {
+  writing-mode: vertical-rl;
+}
+
+.subHeadingEn {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+  color: variables.$color-primary;
+  letter-spacing: 13px;
+}
+
+.seemoreLinkArea {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.seemoreLink {
+  display: inline-block;
+  padding-right: 24px;
+  margin-bottom: 16px;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.linkText {
+  margin-right: 24px;
+  font-size: 20px;
+  color: variables.$color-primary;
+  letter-spacing: 2px;
+
+  &.-large {
+    display: none;
+  }
+}
+
+.linkCircle {
+  position: relative;
+  display: block;
+  min-width: 36px;
+  min-height: 36px;
+  border: 1px solid variables.$color-primary;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    content: "";
+    background-color: variables.$color-primary;
+  }
+
+  &::after {
+    position: absolute;
+    top: 45%;
+    right: -67%;
+    width: 6px;
+    height: 1.4px;
+    content: "";
+    background-color: variables.$color-primary;
+    transform: rotate(35deg);
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
