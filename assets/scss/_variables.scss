@@ -26,6 +26,8 @@ $mobile: $content-width-xxs;
 $tablet: $content-width-xs;
 $pc: $content-width-sm;
 
+$transition-speed-normal: 0.3s;
+
 @mixin mq($break-point) {
   @media screen and (max-width: $break-point) {
     @content;

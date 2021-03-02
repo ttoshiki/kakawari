@@ -40,12 +40,16 @@ ol {
 }
 
 a {
-  transition: opacity 0.4s;
+  transition: opacity 0.3s;
+}
+a:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 img {
   max-width: 100%;
-  transition: opacity 0.4s;
+  transition: opacity 0.3s;
 }
 
 select,
@@ -121,7 +125,7 @@ textarea {
   display: inline-block;
   padding-right: 24px;
   margin-bottom: 16px;
-  transition: opacity 0.4s;
+  transition: opacity 0.3s;
 }
 .seemoreLink:hover {
   opacity: 0.6;
@@ -206,7 +210,7 @@ textarea {
 .header__nav .menu a {
   font-weight: 600;
   color: #bca874;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s;
 }
 .header__nav .menu a:hover {
   opacity: 0.5;
@@ -233,7 +237,7 @@ textarea {
 .header__trigger, .header__trigger span {
   box-sizing: border-box;
   display: inline-block;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .header__trigger {
   position: relative;
@@ -320,10 +324,6 @@ textarea {
   top: max(-10vw, -125px);
   display: block;
 }
-.footer__bannerLink:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
 .footer__bannerContents {
   position: absolute;
   top: 50%;
@@ -390,6 +390,9 @@ textarea {
   color: #ffffff;
 }
 
+.home__wrapper {
+  overflow: hidden;
+}
 .home__mv {
   position: relative;
 }
@@ -419,7 +422,7 @@ textarea {
   margin: 72px auto 0;
 }
 .home__profile .seemoreLink {
-  width: 76%;
+  width: 77%;
 }
 .home__profile .subHeadingJp {
   margin-right: 40px;
@@ -451,12 +454,14 @@ textarea {
   letter-spacing: 1px;
 }
 .home__column {
-  max-width: 1024px;
+  position: relative;
   margin: 128px auto 0;
 }
 .home__columnInner {
   display: flex;
+  max-width: 1024px;
   padding: 0 12px;
+  margin: 0 auto;
 }
 .home__columnList {
   position: relative;
@@ -494,11 +499,18 @@ textarea {
 }
 .home__columnLink {
   position: absolute;
-  right: -70px;
+  right: -88px;
   bottom: 74px;
 }
 .home__columnLink.-medium {
   display: none;
+}
+.home__columnPolkaDot {
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  z-index: -1;
+  width: 14%;
 }
 .home__service {
   margin: 120px auto 0;
@@ -514,6 +526,7 @@ textarea {
   margin-top: 16px;
 }
 .home__gallery {
+  position: relative;
   margin: 120px auto 0;
 }
 .home__gallery .subHeadingJp {
@@ -529,10 +542,20 @@ textarea {
 .home__gallery .seemoreLink {
   margin-top: 16px;
 }
+.home__gallery .l-doubleCol {
+  position: relative;
+}
 .home__gallery .l-doubleCol__col {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+.home__galleryPolkaDot {
+  position: absolute;
+  top: -124px;
+  right: -80px;
+  z-index: -1;
+  width: 23.63%;
 }
 .home__instagram {
   max-width: 1024px;
@@ -595,6 +618,6 @@ textarea {
     bottom: auto;
     display: block;
     padding-right: 24px;
-    margin-top: 40px;
+    margin: 40px 104px 0 0;
   }
 }

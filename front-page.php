@@ -55,11 +55,13 @@
 							<?php while (have_posts()) : the_post(); ?>
 							<li class="home__columnItem">
 								<article id="post-<?php the_ID(); ?>" <?php post_class('archive__article'); ?>>
-									<?php
-										if (has_post_thumbnail()) {
-											the_post_thumbnail('large');
-										}
-									?>
+									<a href="<?php the_permalink(); ?>">
+										<?php
+											if (has_post_thumbnail()) {
+												the_post_thumbnail('large');
+											}
+										?>
+									</a>
 									<div class="home__columnMeta">
 										<time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="home__columnDate"><?php echo get_post_time('Y/m/d'); ?></time>
 										<h3 class="home__columnTitle"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
@@ -83,6 +85,10 @@
 						</div>
 					</a>
 				</div>
+				<picture>
+					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot01.webp" type="image/webp">
+					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot01.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot01.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot01@2x.png 2x " alt="" class="home__columnPolkaDot">
+				</picture>
 			</section>
 			<section class="home__service">
 				<div class="l-doubleCol">
@@ -136,6 +142,10 @@
 							</div>
 						</a>
 					</div>
+					<picture>
+						<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot02.webp" type="image/webp">
+						<img src="<?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot02.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot02.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot02@2x.png 2x " alt="" class="home__galleryPolkaDot">
+					</picture>
 				</div>
 			</section>
 			<section class="home__instagram">

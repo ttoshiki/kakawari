@@ -43,12 +43,17 @@ ol {
 }
 
 a {
-  transition: opacity 0.4s;
+  transition: opacity variables.$transition-speed-normal;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 
 img {
   max-width: 100%;
-  transition: opacity 0.4s;
+  transition: opacity variables.$transition-speed-normal;
 }
 
 select,

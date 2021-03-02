@@ -17,11 +17,6 @@
     top: -10vw;
     top: max(-10vw, -125px);
     display: block;
-
-    &:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
   }
 
   &__bannerContents {

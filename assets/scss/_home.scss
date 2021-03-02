@@ -1,6 +1,10 @@
 @use "variables";
 
 .home {
+  &__wrapper {
+    overflow: hidden;
+  }
+
   &__mv {
     position: relative;
 
@@ -38,7 +42,7 @@
     margin: 72px auto 0;
 
     .seemoreLink {
-      width: 76%;
+      width: 77%;
     }
 
     .subHeadingJp {
@@ -79,13 +83,15 @@
   }
 
   &__column {
-    max-width: variables.$content-width-sm;
+    position: relative;
     margin: 128px auto 0;
   }
 
   &__columnInner {
     display: flex;
+    max-width: variables.$content-width-sm;
     padding: 0 12px;
+    margin: 0 auto;
   }
 
   &__columnList {
@@ -129,12 +135,20 @@
 
   &__columnLink {
     position: absolute;
-    right: -70px;
+    right: -88px;
     bottom: 74px;
 
     &.-medium {
       display: none;
     }
+  }
+
+  &__columnPolkaDot {
+    position: absolute;
+    bottom: -160px;
+    left: 0;
+    z-index: -1;
+    width: 14%;
   }
 
   &__service {
@@ -155,6 +169,7 @@
   }
 
   &__gallery {
+    position: relative;
     margin: 120px auto 0;
 
     .subHeadingJp {
@@ -174,11 +189,23 @@
       margin-top: 16px;
     }
 
+    .l-doubleCol {
+      position: relative;
+    }
+
     .l-doubleCol__col {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
+  }
+
+  &__galleryPolkaDot {
+    position: absolute;
+    top: -124px;
+    right: -80px;
+    z-index: -1;
+    width: 23.63%;
   }
 
   &__instagram {
@@ -259,7 +286,7 @@
         bottom: auto;
         display: block;
         padding-right: 24px;
-        margin-top: 40px;
+        margin: 40px 104px 0 0;
       }
     }
   }

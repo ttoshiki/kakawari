@@ -22,7 +22,7 @@
       a {
         font-weight: 600;
         color: variables.$color-primary;
-        transition: opacity 0.2s;
+        transition: opacity variables.$transition-speed-normal;
 
         &:hover {
           opacity: 0.5;
@@ -61,7 +61,7 @@
   &__trigger span {
     box-sizing: border-box;
     display: inline-block;
-    transition: all 0.4s;
+    transition: all variables.$transition-speed-normal;
   }
 
   &__trigger {
