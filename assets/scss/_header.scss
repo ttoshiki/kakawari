@@ -38,6 +38,11 @@
     .menu-primary-container {
       flex-grow: 0.6;
     }
+
+    &.-hasBg {
+      background-color: variables.$white;
+      box-shadow: 0px 0px 6.32px 1.68px rgba(0, 0, 0, 0.21);
+    }
   }
 
   &.-fixed {

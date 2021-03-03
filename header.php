@@ -54,7 +54,7 @@
 				</div>
 			</div>
 		</div>
-		<nav class="header__nav -pc">
+		<nav class="header__nav -pc<?php if(!is_front_page()){ echo ' -hasBg'; } ?>">
 			<?php
 				the_custom_logo();
 			?>

@@ -1,0 +1,256 @@
+@use "variables";
+
+.profile {
+  &__headerPolkaDot {
+    position: absolute;
+    top: 34%;
+    right: 0;
+    width: 19.72%;
+  }
+
+  &__message {
+    display: flex;
+    align-items: flex-start;
+    max-width: variables.$content-width-sm;
+    padding: 0 12px;
+    margin: 128px auto 0;
+  }
+
+  &__messageBlock {
+    .subHeadingJp {
+      height: 524px;
+      margin-right: 32px;
+    }
+  }
+
+  &__messageContents {
+    position: relative;
+    margin-right: 56px;
+  }
+
+  &__paragraphWrapper {
+    margin: 32px 0;
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    line-height: 2.66;
+
+    &:not(:first-of-type) {
+      margin-top: 48px;
+    }
+  }
+
+  &__messageConclusion {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: variables.$color-primary;
+    text-align: right;
+    letter-spacing: 3px;
+  }
+
+  &__messagePolkaDot {
+    position: absolute;
+    bottom: 40px;
+    bottom: 200px;
+    left: -19%;
+    width: 17.46%;
+  }
+
+  &__profile {
+    max-width: variables.$content-width-sm;
+    padding: 0 12px;
+    margin: 128px auto 0;
+  }
+
+  &__profileColumn {
+    display: flex;
+
+    &:not(:first-of-type) {
+      margin-top: 64px;
+    }
+
+    &.-bottom {
+      .profile__profilePicture {
+        margin-top: 12px;
+        margin-left: 56px;
+      }
+    }
+  }
+
+  &__profilePicture {
+    margin-left: 48px;
+  }
+
+  &__profileRight {
+    width: 58.4%;
+    margin-left: 64px;
+
+    .profile__paragraph {
+      margin-top: 16px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__profileName {
+    width: 34.09%;
+  }
+
+  &__profilePosition {
+    display: block;
+    width: 69.17%;
+    margin-top: 16px;
+  }
+
+  &__profileText {
+    width: 100%;
+
+    .profile__paragraph {
+      letter-spacing: 1px;
+    }
+  }
+
+  &__works {
+    display: flex;
+    justify-content: space-between;
+    max-width: variables.$content-width-sm;
+    padding: 0 12px;
+    margin: 128px auto 0;
+
+    .subHeadingJp {
+      height: 192px;
+      margin-right: 30px;
+    }
+  }
+
+  &__worksContents {
+    width: 100%;
+    margin-right: 64px;
+  }
+
+  &__worksTableHeading {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      content: "";
+      background-color: #343434;
+      transform: translateY(-50%);
+    }
+
+    img {
+      display: block;
+      width: 194px;
+      margin-left: 40px;
+    }
+  }
+
+  &__worksTable {
+    margin-top: 24px;
+
+    dl {
+      display: flex;
+      align-items: center;
+      padding: 20px 0 20px 20px;
+      border-top: 1px solid variables.$color-primary;
+
+      &:last-child {
+        border-bottom: 1px solid variables.$color-primary;
+      }
+    }
+
+    dd {
+      margin-left: 48px;
+      line-height: 2.3;
+    }
+  }
+
+  &__separation {
+    position: relative;
+    margin: 128px auto 0;
+  }
+
+  &__separationPolkaDot {
+    &.-front {
+      position: absolute;
+      top: -80px;
+      right: 16%;
+      width: 10%;
+    }
+
+    &.-back {
+      position: absolute;
+      bottom: -100px;
+      left: 7%;
+      z-index: -1;
+      width: 20.69%;
+    }
+  }
+
+  &__company {
+    display: flex;
+    max-width: variables.$content-width-sm;
+    padding: 0 12px;
+    margin: 128px auto 0;
+  }
+
+  &__company {
+    .subHeadingJp {
+      height: 124px;
+      margin-left: 30px;
+    }
+  }
+
+  &__companyTable {
+    width: 100%;
+    margin-left: 48px;
+
+    dl {
+      display: flex;
+      padding: 16px 24px 16px 0;
+      border-bottom: 1px solid variables.$color-primary;
+    }
+
+    dt {
+      width: 23.7%;
+      text-align: center;
+    }
+
+    dd {
+      display: flex;
+      align-items: center;
+      letter-spacing: 2px;
+
+      &::before {
+        display: block;
+        width: 1px;
+        height: 100%;
+        padding: 8px 0;
+        content: "";
+        background-color: variables.$color-primary;
+      }
+    }
+  }
+
+  &__tableDtSpan {
+    display: flex;
+    justify-content: space-between;
+    width: 64px;
+    margin: 8px auto;
+  }
+
+  &__tableDdSpan {
+    padding: 8px 0;
+    margin-left: 48px;
+  }
+
+  &__tableList {
+    margin: 8px 64px;
+    list-style: disc;
+  }
+}

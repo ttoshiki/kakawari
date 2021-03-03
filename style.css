@@ -179,6 +179,19 @@ textarea {
   white-space: nowrap;
 }
 
+.page__header {
+  position: relative;
+}
+.page__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 12px;
+  transform: translate(-50%, -50%);
+}
+
 .l-doubleCol {
   display: flex;
   max-width: 1024px;
@@ -221,6 +234,10 @@ textarea {
 }
 .header__nav .menu-primary-container {
   flex-grow: 0.6;
+}
+.header__nav.-hasBg {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6.32px 1.68px rgba(0, 0, 0, 0.21);
 }
 .header.-fixed {
   position: fixed;
@@ -620,4 +637,206 @@ textarea {
     padding-right: 24px;
     margin: 40px 104px 0 0;
   }
+}
+.profile__headerPolkaDot {
+  position: absolute;
+  top: 34%;
+  right: 0;
+  width: 19.72%;
+}
+.profile__message {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1024px;
+  padding: 0 12px;
+  margin: 128px auto 0;
+}
+.profile__messageBlock .subHeadingJp {
+  height: 524px;
+  margin-right: 32px;
+}
+.profile__messageContents {
+  position: relative;
+  margin-right: 56px;
+}
+.profile__paragraphWrapper {
+  margin: 32px 0;
+}
+.profile__paragraph {
+  font-size: 15px;
+  line-height: 2.66;
+}
+.profile__paragraph:not(:first-of-type) {
+  margin-top: 48px;
+}
+.profile__messageConclusion {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #bca874;
+  text-align: right;
+  letter-spacing: 3px;
+}
+.profile__messagePolkaDot {
+  position: absolute;
+  bottom: 40px;
+  bottom: 200px;
+  left: -19%;
+  width: 17.46%;
+}
+.profile__profile {
+  max-width: 1024px;
+  padding: 0 12px;
+  margin: 128px auto 0;
+}
+.profile__profileColumn {
+  display: flex;
+}
+.profile__profileColumn:not(:first-of-type) {
+  margin-top: 64px;
+}
+.profile__profileColumn.-bottom .profile__profilePicture {
+  margin-top: 12px;
+  margin-left: 56px;
+}
+.profile__profilePicture {
+  margin-left: 48px;
+}
+.profile__profileRight {
+  width: 58.4%;
+  margin-left: 64px;
+}
+.profile__profileRight .profile__paragraph {
+  margin-top: 16px;
+  letter-spacing: 1px;
+}
+.profile__profileName {
+  width: 34.09%;
+}
+.profile__profilePosition {
+  display: block;
+  width: 69.17%;
+  margin-top: 16px;
+}
+.profile__profileText {
+  width: 100%;
+}
+.profile__profileText .profile__paragraph {
+  letter-spacing: 1px;
+}
+.profile__works {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+  padding: 0 12px;
+  margin: 128px auto 0;
+}
+.profile__works .subHeadingJp {
+  height: 192px;
+  margin-right: 30px;
+}
+.profile__worksContents {
+  width: 100%;
+  margin-right: 64px;
+}
+.profile__worksTableHeading {
+  position: relative;
+}
+.profile__worksTableHeading::before {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  content: "";
+  background-color: #343434;
+  transform: translateY(-50%);
+}
+.profile__worksTableHeading img {
+  display: block;
+  width: 194px;
+  margin-left: 40px;
+}
+.profile__worksTable {
+  margin-top: 24px;
+}
+.profile__worksTable dl {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 20px;
+  border-top: 1px solid #bca874;
+}
+.profile__worksTable dl:last-child {
+  border-bottom: 1px solid #bca874;
+}
+.profile__worksTable dd {
+  margin-left: 48px;
+  line-height: 2.3;
+}
+.profile__separation {
+  position: relative;
+  margin: 128px auto 0;
+}
+.profile__separationPolkaDot.-front {
+  position: absolute;
+  top: -80px;
+  right: 16%;
+  width: 10%;
+}
+.profile__separationPolkaDot.-back {
+  position: absolute;
+  bottom: -100px;
+  left: 7%;
+  z-index: -1;
+  width: 20.69%;
+}
+.profile__company {
+  display: flex;
+  max-width: 1024px;
+  padding: 0 12px;
+  margin: 128px auto 0;
+}
+.profile__company .subHeadingJp {
+  height: 124px;
+  margin-left: 30px;
+}
+.profile__companyTable {
+  width: 100%;
+  margin-left: 48px;
+}
+.profile__companyTable dl {
+  display: flex;
+  padding: 16px 24px 16px 0;
+  border-bottom: 1px solid #bca874;
+}
+.profile__companyTable dt {
+  width: 23.7%;
+  text-align: center;
+}
+.profile__companyTable dd {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.profile__companyTable dd::before {
+  display: block;
+  width: 1px;
+  height: 100%;
+  padding: 8px 0;
+  content: "";
+  background-color: #bca874;
+}
+.profile__tableDtSpan {
+  display: flex;
+  justify-content: space-between;
+  width: 64px;
+  margin: 8px auto;
+}
+.profile__tableDdSpan {
+  padding: 8px 0;
+  margin-left: 48px;
+}
+.profile__tableList {
+  margin: 8px 64px;
+  list-style: disc;
 }
