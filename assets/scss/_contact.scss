@@ -1,0 +1,194 @@
+@use "variables";
+
+.contact {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__desc {
+    position: relative;
+  }
+
+  &__descInner {
+    max-width: 864px;
+    padding: 0 12px;
+    margin: 128px auto 0;
+  }
+
+  &__descPolkaDot {
+    position: absolute;
+    top: 9%;
+    right: 0;
+    z-index: -1;
+    width: 13.84%;
+  }
+
+  &__paragraph {
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 1px;
+
+    a {
+      color: #c9bc9c;
+    }
+  }
+
+  &__asterisk {
+    color: #c9bc9c;
+  }
+
+  &__form {
+    max-width: 864px;
+    padding: 0 12px;
+    margin: 32px auto 0;
+
+    .form-input {
+      display: flex;
+
+      &:not(:first-of-type) {
+        margin-top: 32px;
+      }
+    }
+
+    .form-label {
+      width: 232px;
+      font-size: 15px;
+    }
+
+    .required-label {
+      margin-left: 2px;
+      color: #c9bc9c;
+    }
+
+    .wpcf7-form-control-wrap {
+      flex-grow: 1;
+      font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+        "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium",
+        "Yu Gothic", Verdana, Meiryo, sans-serif;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 0 12px 15px;
+      font-size: 15px;
+      color: #222222;
+      background-color: #f5ede1;
+      border: none;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      width: auto;
+      opacity: 0;
+    }
+
+    .wpcf7-list-item-label:hover {
+      cursor: pointer;
+    }
+
+    .wpcf7-list-item-label::before {
+      position: relative;
+      top: -0.1em;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      content: "";
+      background: #fff;
+      border: 1px solid #e4e4e4;
+      border-radius: 100%;
+      box-shadow: inset -2px 2px 1px 0px rgb(10 3 6 / 12%);
+    }
+
+    input[type="radio"]:checked + .wpcf7-list-item-label:before {
+      background-color: variables.$color-primary;
+      box-shadow: inset 0 0 0 2px #fff;
+    }
+
+    .form-items > .wpcf7-radio {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .form-items .wpcf7-list-item {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .wpcf7-list-item {
+      margin-left: 0;
+    }
+
+    .form-submitWrapper {
+      position: relative;
+      width: 256px;
+      margin: 40px auto 0;
+
+      .linkCircle {
+        position: absolute;
+        top: 50%;
+        right: 72px;
+        min-width: 24px;
+        min-height: 24px;
+        border-color: #000000;
+        transform: translateY(-50%);
+
+        &::before,
+        &::after {
+          background-color: #000000;
+        }
+
+        &::before {
+          width: 24px;
+        }
+
+        &::after {
+          top: 44%;
+          right: -63%;
+        }
+      }
+
+      .ajax-loader {
+        position: absolute;
+      }
+    }
+
+    .form-submit {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 60px;
+      padding: 0 0 0 72px;
+      font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro",
+        "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+      color: #000000;
+      letter-spacing: 2px;
+      background-color: #c2b08a;
+      box-shadow: 0px 0px 19.71px 7.29px rgba(0, 0, 0, 0.07);
+      transition: opacity variables.$transition-speed-normal;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__caution {
+    display: block;
+    margin: 32px 0 0;
+  }
+
+  &__polkaDot {
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    z-index: -1;
+    width: 15%;
+  }
+}
