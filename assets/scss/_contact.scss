@@ -192,3 +192,6 @@
     width: 15%;
   }
 }
+
+@include variables.mq(variables.$tablet) {
+}

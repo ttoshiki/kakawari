@@ -100,3 +100,64 @@
     color: variables.$white;
   }
 }
+
+@include variables.mq(variables.$tablet) {
+  .footer {
+    margin: 34vw auto 0;
+    background-image: url(./dist/images/footer_bg-sp.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__menu {
+      .menu {
+        flex-wrap: wrap;
+        margin-top: 8vw;
+      }
+
+      .menu-item {
+        width: 26%;
+        margin: 12px 0;
+        font-size: 3.6vw;
+        font-size: min(16px, 3.6vw);
+        text-align: center;
+      }
+    }
+
+    &__bannerContents {
+      flex-direction: column;
+
+      svg {
+        width: 50vw;
+      }
+    }
+
+    &__bannerLink {
+      top: max(-16.4vw, -125px);
+    }
+
+    &__bannerTextEn {
+      margin-top: 3vw;
+
+      .linkText {
+        font-size: 3.2vw;
+        letter-spacing: 3px;
+      }
+
+      .linkCircle {
+        min-width: 8vw;
+        min-height: 8vw;
+      }
+    }
+
+    &__logo {
+      width: 24.6vw;
+      max-width: 120px;
+      margin-top: 0;
+    }
+
+    &__copyrightWrapper {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+  }
+}

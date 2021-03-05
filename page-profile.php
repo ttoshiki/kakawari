@@ -138,10 +138,7 @@
         </div>
       </section>
       <div class="profile__separation">
-        <picture class="profile__separationPicture">
-          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/separation_image.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/separation_image.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/separation_image.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/separation_image@2x.jpg 2x " alt="" class="profile__separationPolkaDot">
-        </picture>
+        <div class="profile__separationPicture"></div>
         <picture class="profile__separationPolkaDot -front">
           <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03@2x.png 2x " alt="" class="profile__separationPolkaDot">

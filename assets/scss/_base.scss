@@ -90,7 +90,7 @@ textarea {
   display: none;
 }
 
-@include variables.mq(variables.$mobile) {
+@include variables.mq(variables.$tablet) {
   .-pc {
     display: none;
   }

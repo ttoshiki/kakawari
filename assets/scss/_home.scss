@@ -11,7 +11,6 @@
     &.-fixed {
       width: 73.2%;
       margin-top: 16px;
-      mix-blend-mode: multiply;
     }
 
     &.-first,
@@ -48,6 +47,10 @@
     .subHeadingJp {
       margin-right: 40px;
     }
+  }
+
+  &__profileBlockWrapper {
+    display: flex;
   }
 
   &__profileBlock {
@@ -287,6 +290,169 @@
         display: block;
         padding-right: 24px;
         margin: 40px 104px 0 0;
+      }
+    }
+  }
+}
+
+@include variables.mq(variables.$tablet) {
+  .home {
+    &__mv {
+      &.-fixed {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    &__profile {
+      flex-direction: column-reverse;
+      padding: 0 24px;
+      margin-top: 22.86vw;
+
+      .seemoreLink {
+        width: 38vw;
+        padding-right: 0;
+        margin-top: 4vw;
+      }
+    }
+
+    &__profileBlock {
+      .subHeadingJp {
+        height: 200px;
+        margin-right: 12px;
+      }
+
+      &.-center {
+        width: 100%;
+        margin: 0 32px 0 0;
+      }
+
+      &.-left {
+        width: 100%;
+        margin-top: 24px;
+      }
+    }
+
+    &__paragraph {
+      font-size: 14px;
+      line-height: 1.9;
+      letter-spacing: 0;
+    }
+
+    &__column {
+      margin: 21.34vw auto 0;
+    }
+
+    &__columnInner {
+      padding: 0 24px;
+    }
+
+    &__columnList {
+      grid-template-columns: 1fr;
+      margin-left: 24px;
+
+      .archive__article {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-column-gap: 24px;
+        place-items: center;
+      }
+
+      .wp-post-image {
+        width: 33.334vw;
+        max-width: 200px;
+        height: 33.334vw;
+        max-height: 200px;
+      }
+    }
+
+    &__columnItem {
+      &:not(:first-child) {
+        margin-top: 2.4vw;
+      }
+    }
+
+    &__columnDate {
+      margin-top: 0;
+      font-size: 2.95vw;
+      font-size: min(14px, 2.95vw);
+    }
+
+    &__columnTitle {
+      margin-top: 1vw;
+      -webkit-line-clamp: 3;
+      font-size: 3.2vw;
+      font-size: min(16px, 3.2vw);
+    }
+
+    &__columnLink {
+      &.-medium {
+        margin: 24px 0 0 0;
+      }
+    }
+
+    &__service {
+      padding: 0 24px;
+      margin: 22.86vw auto 0;
+
+      .subHeadingJp {
+        height: 52.4vw;
+        margin: 0 2vw 0 5vw;
+      }
+    }
+
+    &__gallery {
+      padding: 0 24px;
+      margin: 48px auto 0;
+
+      .subHeadingJp {
+        height: 43.47vw;
+        margin: 0 6vw 0 3vw;
+      }
+    }
+
+    &__instagram {
+      padding: 0 24px;
+      margin: 21.34vw auto 0;
+
+      .seemoreLink {
+        margin: 6px 0 0;
+      }
+    }
+
+    #sb_instagram.sbi_col_4.sbi_mob_col_auto #sbi_images .sbi_item {
+      width: 50%;
+    }
+
+    #sb_instagram #sbi_images {
+      &:nth-child(odd) {
+        padding: 0 8px 8px 0 !important;
+      }
+    }
+
+    #sb_instagram.sbi_width_resp {
+      padding-bottom: 0 !important;
+    }
+
+    // 右上アイコン
+    #sb_instagram svg:not(:root).svg-inline--fa {
+      display: none !important;
+    }
+
+    &__otherServiceArea {
+      margin: 17vw auto 0;
+    }
+
+    &__serviceLink {
+      width: 14.934vw;
+      min-width: 14.934vw;
+      min-height: 14.934vw;
+      margin: 0 4vw;
+    }
+
+    &__serviceIcon {
+      &.-twitter {
+        width: 6.6vw;
       }
     }
   }

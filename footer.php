@@ -15,6 +15,8 @@
         <div class="footer__banner">
             <a href="<?php echo home_url('/contact/'); ?>" class="footer__bannerLink">
                 <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/footer_banner-sp.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/footer_banner-sp.jpg" media="(max-width: 768px)">
                     <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/footer_banner.webp" type="image/webp">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/images/footer_banner.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/footer_banner.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/footer_banner@2x.jpg 2x " alt="">
                 </picture>

@@ -95,3 +95,49 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@include variables.mq(variables.$tablet) {
+  .page {
+    &__heading {
+      font-size: 3vw;
+    }
+  }
+
+  .subHeadingEn {
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+
+  .seemoreLink {
+    &.-pc {
+      display: none;
+    }
+  }
+
+  .seemoreLinkAreaWrapper {
+    text-align: right;
+
+    .seemoreLink {
+      padding-right: 0;
+    }
+  }
+
+  .linkText {
+    margin-right: 3.2vw;
+    font-size: 3.46vw;
+  }
+
+  .linkCircle {
+    min-width: 7.47vw;
+    min-height: 7.47vw;
+
+    &::before {
+      width: 8.8vw;
+    }
+
+    &::after {
+      top: 45%;
+      right: -74%;
+    }
+  }
+}
