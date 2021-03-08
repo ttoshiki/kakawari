@@ -11,6 +11,11 @@
     display: flex;
     align-items: center;
     height: 70px;
+    background-color: variables.$white;
+
+    &.home {
+      background-color: transparent;
+    }
 
     .menu {
       display: flex;
@@ -36,6 +41,11 @@
     .menu-primary-container {
       flex-grow: 0.6;
     }
+  }
+
+  &.-fixed {
+    position: fixed;
+    background-color: variables.$white;
   }
 }
 

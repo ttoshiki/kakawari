@@ -380,6 +380,8 @@
     }
 
     &__worksTable {
+      margin-top: 20px;
+
       &::before {
         width: 9%;
       }
@@ -400,6 +402,10 @@
     }
 
     &__worksTableHeading {
+      &::before {
+        width: 9%;
+      }
+
       img {
         width: 37.07vw;
         margin-left: 13%;

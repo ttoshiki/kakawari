@@ -268,7 +268,7 @@ textarea {
     width: 14.934vw;
     min-width: 14.934vw;
     min-height: 14.934vw;
-    margin: 0 4vw;
+    margin: 0 3.4vw;
   }
 
   .otherServiceIcon.-twitter {
@@ -302,6 +302,10 @@ textarea {
   display: flex;
   align-items: center;
   height: 70px;
+  background-color: #ffffff;
+}
+.header__nav.home {
+  background-color: transparent;
 }
 .header__nav .menu {
   display: flex;
@@ -322,6 +326,10 @@ textarea {
 }
 .header__nav .menu-primary-container {
   flex-grow: 0.6;
+}
+.header.-fixed {
+  position: fixed;
+  background-color: #ffffff;
 }
 
 .fixedMenu {
@@ -1239,6 +1247,9 @@ textarea {
     height: 25.6vw;
     margin-right: 2.2vw;
   }
+  .profile__worksTable {
+    margin-top: 20px;
+  }
   .profile__worksTable::before {
     width: 9%;
   }
@@ -1253,6 +1264,9 @@ textarea {
   .profile__worksTable dd {
     margin-top: 6px;
     margin-left: 0;
+  }
+  .profile__worksTableHeading::before {
+    width: 9%;
   }
   .profile__worksTableHeading img {
     width: 37.07vw;
