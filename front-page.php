@@ -191,19 +191,8 @@
 					</div>
 				</div>
 			</section>
-			<section class="home__otherServiceArea">
-				<a class="home__serviceLink">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/icons/twitter.png" alt="twitter" class="home__serviceIcon -twitter">
-				</a>
-				<a class="home__serviceLink">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/icons/note.png" alt="note" class="home__serviceIcon -note">
-				</a>
-				<a class="home__serviceLink">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/icons/youtube.png" alt="youtube" class="home__serviceIcon -youtube">
-				</a>
-				<a class="home__serviceLink">
-					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/icons/facebook.png" alt="facebook" class="home__serviceIcon -facebook">
-				</a>
+			<section class="home__otherServiceLinks">
+				<?php get_template_part('template-parts/other-service-links') ?>
 			</section>
 		</div>
 	</main><!-- #main -->

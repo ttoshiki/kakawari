@@ -44,10 +44,7 @@
 
     .form-input {
       display: flex;
-
-      &:not(:first-of-type) {
-        margin-top: 32px;
-      }
+      margin-top: 32px;
     }
 
     .form-label {
@@ -194,4 +191,49 @@
 }
 
 @include variables.mq(variables.$tablet) {
+  .contact {
+    &__descInner {
+      padding: 0 24px;
+      margin: 48px auto 0;
+    }
+
+    &__paragraph {
+      font-size: 14px;
+      line-height: 1.8;
+      letter-spacing: 0;
+    }
+
+    &__caution {
+      margin: 24px 0 0;
+      font-size: 13px;
+    }
+
+    &__form {
+      padding: 0 24px;
+      margin-bottom: 160px;
+
+      .form-input {
+        flex-direction: column;
+      }
+
+      .form-items {
+        & > .wpcf7-radio {
+          display: block;
+        }
+
+        .wpcf7-list-item {
+          display: block;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .form-label {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+  }
 }

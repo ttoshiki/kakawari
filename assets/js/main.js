@@ -16,7 +16,7 @@ jQuery(function() {
   heroBottom;
 
   _window.on("scroll", function () {
-    heroBottom = 94;
+    heroBottom = 58;
     if (_window.scrollTop() > heroBottom) {
       _header.addClass("-fixed");
     } else {
@@ -50,6 +50,7 @@ jQuery(function() {
       }
     }
     jQuery(this).toggleClass('-opened')
+    jQuery('.header__hammenu').toggleClass('-opened')
     jQuery(".header__trigger").toggleClass('active');
   });
 

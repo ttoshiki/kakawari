@@ -27,6 +27,10 @@
   &:hover {
     opacity: 0.6;
   }
+
+  &.-sp {
+    display: none;
+  }
 }
 
 .linkText {
@@ -96,10 +100,42 @@
   }
 }
 
+.otherServiceLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.otherServiceLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  min-height: 132px;
+  margin: 0 30px;
+  background-color: variables.$color-secondary;
+  border-radius: 50%;
+}
+
+.otherServiceIcon {
+  &.-note {
+    width: 36%;
+  }
+
+  &.-youtube {
+    width: 47%;
+  }
+
+  &.-facebook {
+    width: 19%;
+  }
+}
+
 @include variables.mq(variables.$tablet) {
   .page {
     &__heading {
-      font-size: 3vw;
+      top: 60%;
+      font-size: 6.7vw;
+      letter-spacing: 6px;
     }
   }
 
@@ -111,6 +147,10 @@
   .seemoreLink {
     &.-pc {
       display: none;
+    }
+
+    &.-sp {
+      display: inline-block;
     }
   }
 
@@ -138,6 +178,19 @@
     &::after {
       top: 45%;
       right: -74%;
+    }
+  }
+
+  .otherServiceLink {
+    width: 14.934vw;
+    min-width: 14.934vw;
+    min-height: 14.934vw;
+    margin: 0 4vw;
+  }
+
+  .otherServiceIcon {
+    &.-twitter {
+      width: 44%;
     }
   }
 }

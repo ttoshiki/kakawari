@@ -35,11 +35,11 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="header" class="header">
-		<div class="header__hammenu -sp">
+		<div class="header__hammenu -sp<?php if(is_front_page()) { echo ' home'; } ?>">
 			<?php
 				the_custom_logo();
 			?>
-			<span class="header__trigger" href="#" @click="toggleMenu" id="trigger">
+			<span class="header__trigger<?php if(is_front_page()) { echo ' home'; } ?>" href="#" @click="toggleMenu" id="trigger">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -48,13 +48,16 @@
 				<div class="header__hammenuInner">
 					<?php
 						wp_nav_menu(array(
-							'theme_location' => 'primary'
+							'theme_location' => 'sp_menu'
 						));
 					?>
 				</div>
+				<div class="header__otherServiceLinks">
+					<?php get_template_part('template-parts/other-service-links') ?>
+				</div>
 			</div>
 		</div>
-		<nav class="header__nav -pc<?php if(!is_front_page()){ echo ' -hasBg'; } ?>">
+		<nav class="header__nav -pc">
 			<?php
 				the_custom_logo();
 			?>

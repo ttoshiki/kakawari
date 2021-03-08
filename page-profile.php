@@ -4,66 +4,97 @@
       <div class="page__header">
         <h1 class="page__heading"><?php echo the_title(); ?></h1>
         <picture>
+					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile_header-sp.webp" media="(max-width: 768px)" type="image/webp">
+					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile_header-sp.jpg" media="(max-width: 768px)">
 					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile_header.webp" type="image/webp">
 					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile_header.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile_header.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/profile_header@2x.jpg 2x " alt="">
 				</picture>
         <picture>
+					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot01-sp.webp" media="(max-width: 768px)" type="image/webp">
+					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot01-sp.png" media="(max-width: 768px)" type="image/webp">
 					<source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot01.webp" type="image/webp">
 					<img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot01.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot01.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot01@2x.png 2x " alt="" class="profile__headerPolkaDot">
 				</picture>
       </div>
       <section class="profile__message">
-        <div class="profile__messageContents">
-          <picture class="profile__messagePicture">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/message01@2x.jpg 2x " alt="">
-          </picture>
-          <div class="profile__paragraphWrapper">
-            <p class="profile__paragraph">
-              これからの時代は、感性を表現する人に惹かれる。知識だけあれば、全員が心からの喜びを体現できるということではないこと。ひとりひとりが気づき始めています。
-            </p>
-            <p class="profile__paragraph">
-              個人の話にはなりますが、病気の経験から、私には価値がないと思い、感情を押し込めた苦しい日々でした。裏表もなく、全てを出した時に、「コンプレックス」と思い込んでいたことも「個性」であることを強烈に体験しました。
-            </p>
+        <div class="profile__messageInner">
+          <div class="profile__messageContents">
+            <picture class="profile__messagePicture">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01-sp.webp" media="(max-width: 768px)" type="image/webp">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01-sp.jpg" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message01.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/message01@2x.jpg 2x " alt="">
+            </picture>
+            <div class="profile__paragraphWrapper">
+              <p class="profile__paragraph -pc">
+                これからの時代は、感性を表現する人に惹かれる。知識だけあれば、全員が心からの喜びを体現できるということではないこと。ひとりひとりが気づき始めています。
+              </p>
+              <p class="profile__paragraph -pc">
+                個人の話にはなりますが、病気の経験から、私には価値がないと思い、感情を押し込めた苦しい日々でした。裏表もなく、全てを出した時に、「コンプレックス」と思い込んでいたことも「個性」であることを強烈に体験しました。
+              </p>
+            </div>
+            <picture class="profile__messagePicture">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/blank.png" media="(max-width: 768px)">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/message02@2x.jpg 2x " alt="" class="profile__messageImage">
+            </picture>
+            <div class="profile__paragraphWrapper">
+              <p class="profile__paragraph -pc">
+                それは本物の才能に繋がる、ヒントになることを学びました。「やり方」ではなく「あり方」から紐解く「自分らしく」を内面から紡ぎ出すこと。
+              </p>
+              <p class="profile__paragraph -pc">
+                それは「今を生きる」ということを、心と体で愉しめるプロセスに繋がります。是非とも、会いに来てください。
+              </p>
+              <span class="profile__messageConclusion -pc">関わり</span>
+            </div>
+            <picture>
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot02.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot02.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot02.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot02@2x.png 2x " alt="" class="profile__messagePolkaDot">
+            </picture>
           </div>
-          <picture class="profile__messagePicture">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/message02@2x.jpg 2x " alt="" class="profile__messageImage">
-          </picture>
-          <div class="profile__paragraphWrapper">
-            <p class="profile__paragraph">
-              それは本物の才能に繋がる、ヒントになることを学びました。「やり方」ではなく「あり方」から紐解く「自分らしく」を内面から紡ぎ出すこと。
-            </p>
-            <p class="profile__paragraph">
-              それは「今を生きる」ということを、心と体で愉しめるプロセスに繋がります。是非とも、会いに来てください。
-            </p>
-            <span class="profile__messageConclusion">関わり</span>
+          <div class="profile__messageBlock -vertical">
+            <h2 class="subHeadingEn">Message</h2>
+            <h3 class="subHeadingJp">
+              <span class="sr-only">あるがままで生きる人が価値になる</span>
+              <img
+                src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message_ja.svg"
+                alt="あるがままで生きる人が価値になる"
+              >
+            </h3>
           </div>
-          <picture>
-            <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot02.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot02.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot02.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/home/polka_dot02@2x.png 2x " alt="" class="profile__messagePolkaDot">
-          </picture>
         </div>
-        <div class="profile__messageBlock -vertical">
-          <h2 class="subHeadingEn">Message</h2>
-          <h3 class="subHeadingJp">
-            <span class="sr-only">あるがままで生きる人が価値になる</span>
-            <img
-              src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message_ja.svg"
-              alt="あるがままで生きる人が価値になる"
-            >
-          </h3>
+        <p class="profile__paragraph -sp">
+          これからの時代は、感性を表現する人に惹かれる。知識だけあれば、全員が心からの喜びを体現できるということではないこと。ひとりひとりが気づき始めています。
+        </p>
+        <p class="profile__paragraph -sp">
+          個人の話にはなりますが、病気の経験から、私には価値がないと思い、感情を押し込めた苦しい日々でした。裏表もなく、全てを出した時に、「コンプレックス」と思い込んでいたことも「個性」であることを強烈に体験しました。
+        </p>
+        <picture class="profile__messagePicture -second">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/blank.png" media="(min-width: 769px)">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02-sp.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/message02-sp.jpg" alt="" class="profile__messageImage">
+        </picture>
+        <div class="profile__paragraphWrapper">
+          <p class="profile__paragraph -sp">
+            それは本物の才能に繋がる、ヒントになることを学びました。「やり方」ではなく「あり方」から紐解く「自分らしく」を内面から紡ぎ出すこと。
+          </p>
+          <p class="profile__paragraph -sp">
+            それは「今を生きる」ということを、心と体で愉しめるプロセスに繋がります。是非とも、会いに来てください。
+          </p>
+          <span class="profile__messageConclusion -sp">関わり</span>
         </div>
       </section>
       <section class="profile__profile">
         <div class="profile__profileColumn">
-          <div class="profile__profileBlock -vertical">
-            <h2 class="subHeadingEn">Profile</h2>
+          <div class="profile__profileColumnInner">
+            <div class="profile__profileBlock -vertical">
+              <h2 class="subHeadingEn">Profile</h2>
+            </div>
+            <picture class="profile__profilePicture">
+              <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01@2x.jpg 2x " alt="" class="profile__messageImage">
+            </picture>
           </div>
-          <picture class="profile__profilePicture">
-            <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01.jpg" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01.jpg 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/profile01@2x.jpg 2x " alt="" class="profile__messageImage">
-          </picture>
           <div class="profile__profileRight">
             <h3 class="profile__profileName">
               <span class="sr-only">関 愛子</span>
@@ -114,15 +145,21 @@
           <div class="profile__worksTable">
             <dl>
               <dt>2020.11</dt>
-              <dd>「0→1night SNSを駆使して事業創造を加速させる！」</dd>
+              <dd>
+                <a href="http://ptix.at/oO7rF3" target="_blank" noopener>「0→1night SNSを駆使して事業創造を加速させる！」</a>
+              </dd>
             </dl>
             <dl>
               <dt>2020.12</dt>
-              <dd>サンクチュアリ出版主催 「アレルギー・うつから学んだ【サスティナブルな生き方】〜あなたの心身から学ぼう〜」</dd>
+              <dd>
+                <a href="https://prtimes.jp/main/html/rd/p/000000004.000070342.html" target="_blank" noopener>サンクチュアリ出版主催 「アレルギー・うつから学んだ【サスティナブルな生き方】〜あなたの心身から学ぼう〜」</a>
+              </dd>
             </dl>
             <dl>
               <dt>2020.12</dt>
-              <dd>COUNTERPART COFFEE GALLERY  写真展「長い旅の途中〜」</dd>
+              <dd>
+                <a href="http://counterpartcoffeegallery.com" target="_blank" noopener>COUNTERPART COFFEE GALLERY  写真展「長い旅の途中〜」</a>
+              </dd>
             </dl>
           </div>
         </div>
@@ -140,10 +177,14 @@
       <div class="profile__separation">
         <div class="profile__separationPicture"></div>
         <picture class="profile__separationPolkaDot -front">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03-sp.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03-sp.png" media="(max-width: 768px)">
           <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot03@2x.png 2x " alt="" class="profile__separationPolkaDot">
         </picture>
         <picture class="profile__separationPolkaDot -back">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot04-sp.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot04-sp.png" media="(max-width: 768px)">
           <source srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot04.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot04.png" srcset="<?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot04.png 1x, <?php echo get_template_directory_uri(); ?>/dist/images/profile/polka_dot04@2x.png 2x " alt="" class="profile__separationImage">
         </picture>
@@ -181,7 +222,7 @@
               <span class="profile__tableDtSpan"><span>所</span><span>在</span><span>地</span></span>
             </dt>
             <dd>
-              <span class="profile__tableDdSpan">〒107-0062　東京都港区南青山2-2-15 ウィン青山942</span>
+              <span class="profile__tableDdSpan">〒107-0062　<br class="-sp">東京都港区南青山2-2-15 <br class="-sp">ウィン青山942</span>
             </dd>
           </dl>
           <dl>
@@ -200,7 +241,7 @@
           </dl>
           <dl>
             <dt>
-              <span class="profile__tableDtSpan"><span>設</span><span>立</span></span>
+              <span class="profile__tableDtSpan -established"><span>設</span><span>立</span></span>
             </dt>
             <dd>
               <span class="profile__tableDdSpan">令和元年12月17日</span>

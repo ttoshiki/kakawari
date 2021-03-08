@@ -9,11 +9,14 @@
   }
 
   &__message {
-    display: flex;
-    align-items: flex-start;
     max-width: variables.$content-width-sm;
     padding: 0 12px;
     margin: 128px auto 0;
+  }
+
+  &__messageInner {
+    display: flex;
+    align-items: flex-start;
   }
 
   &__messageBlock {
@@ -77,6 +80,10 @@
         margin-left: 56px;
       }
     }
+  }
+
+  &__profileColumnInner {
+    display: flex;
   }
 
   &__profilePicture {
@@ -152,6 +159,7 @@
 
   &__worksTable {
     margin-top: 24px;
+    color: #000;
 
     dl {
       display: flex;
@@ -167,6 +175,10 @@
     dd {
       margin-left: 48px;
       line-height: 2.3;
+    }
+
+    a {
+      color: #000;
     }
   }
 
@@ -262,5 +274,228 @@
   &__tableList {
     margin: 8px 64px;
     list-style: disc;
+  }
+}
+
+@include variables.mq(variables.$tablet) {
+  .profile {
+    &__headerPolkaDot {
+      top: 49%;
+      width: 26.6%;
+    }
+
+    &__message {
+      padding: 0 24px;
+      margin: 80px auto 0;
+    }
+
+    &__messageContents {
+      margin-right: 24px;
+    }
+
+    &__messageBlock {
+      .subHeadingJp {
+        height: 70.1vw;
+        margin-right: 2.2vw;
+      }
+    }
+
+    &__messageConclusion {
+      &.-pc {
+        display: none;
+      }
+    }
+
+    &__profile {
+      padding: 0 24px;
+      margin: 80px auto 0;
+    }
+
+    &__profilePicture {
+      margin-left: 24px;
+    }
+
+    &__profileRight {
+      margin-top: 32px;
+    }
+
+    &__profileName {
+      width: 28%;
+    }
+
+    &__profilePosition {
+      width: 57%;
+      margin-top: 8px;
+    }
+
+    &__paragraph {
+      font-size: 14px;
+      line-height: 1.9;
+      letter-spacing: 0;
+
+      &:not(:first-of-type) {
+        margin-top: 24px;
+      }
+    }
+
+    &__messagePicture {
+      &.-second {
+        display: block;
+        margin-top: 24px;
+      }
+    }
+
+    &__profileColumn {
+      flex-direction: column;
+
+      &.-bottom {
+        flex-direction: column-reverse;
+        margin-top: 24px;
+
+        .profile__profilePicture {
+          margin-bottom: 24px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__profileRight {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &__messageConclusion {
+      margin-top: 16px;
+      font-size: 16px;
+    }
+
+    &__works {
+      padding: 0 24px;
+      margin: 80px auto 0;
+
+      .subHeadingJp {
+        height: 25.6vw;
+        margin-right: 2.2vw;
+      }
+    }
+
+    &__worksTable {
+      &::before {
+        width: 9%;
+      }
+
+      dl {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0 12px;
+        font-size: 12px;
+        font-feature-settings: "palt";
+        letter-spacing: 1px;
+      }
+
+      dd {
+        margin-top: 6px;
+        margin-left: 0;
+      }
+    }
+
+    &__worksTableHeading {
+      img {
+        width: 37.07vw;
+        margin-left: 13%;
+      }
+    }
+
+    &__worksContents {
+      margin-right: 32px;
+    }
+
+    &__separation {
+      margin: 80px auto 0;
+    }
+
+    &__separationPolkaDot {
+      &.-front {
+        top: -19vw;
+        right: 6%;
+        width: 26.8%;
+      }
+
+      &.-back {
+        bottom: -9vw;
+        left: 10%;
+        z-index: 1;
+        width: 10.85%;
+      }
+    }
+
+    &__separationPicture {
+      padding: 23.334%;
+      background-image: url(dist/images/profile/separation_image-sp.jpg);
+    }
+
+    &__company {
+      padding: 0 24px;
+      margin: 80px auto 0;
+
+      .subHeadingJp {
+        height: 16.67vw;
+        margin-left: 3.8vw;
+      }
+    }
+
+    &__companyTable {
+      margin-left: 16px;
+
+      dl {
+        flex-direction: column;
+        padding: 8px 0 6px 32px;
+        font-size: 12px;
+
+        &:not(:first-child) {
+          padding: 16px 0 6px 32px;
+        }
+      }
+
+      dt {
+        width: 100%;
+      }
+
+      dd {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &__tableDtSpan {
+      position: relative;
+      width: 54px;
+      margin: 0 0 2px;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -32px;
+        display: inline-block;
+        width: 5.3vw;
+        height: 1px;
+        content: "";
+        background-color: rgba($color: #c2b08a, $alpha: 0.5);
+        transform: translateY(-50%);
+      }
+
+      &.-established {
+        width: 36px;
+      }
+    }
+
+    &__tableDdSpan {
+      margin-left: 0;
+    }
+
+    &__tableList {
+      margin: 8px 0 6px 16px;
+    }
   }
 }
